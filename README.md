@@ -6,6 +6,11 @@ Tic Tac Toe game that you can play in your browser!
 
 A fun little game project of tic tac toe.
 
+# Features
+
+- You can add two player name
+- You track both the player highest scores
+
 # Live Demo 👁️
 
 - Netlify 🔗
