@@ -11,7 +11,8 @@
 
 body {
   background-color: #242423;
-  margin: 0;cursor:no-drop;
+  margin: 0;
+  cursor: no-drop;
 }
 
 .lets-play {
@@ -32,7 +33,7 @@ body {
   width: 250px;
   height: 70px;
   border: 1px solid rgb(6, 213, 255);
-  border-radius: 10px;
+  border-radius: 32px;
   background-color: rgb(6, 213, 255);
   box-shadow: 10px 10px 80px rgba(6, 214, 255, 0.534);
   color: white;
@@ -43,10 +44,11 @@ body {
   text-align: center;
   cursor: pointer;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
-.play-button:active {
-  font-size: 2rem;
+.play-button:active,
+.play-button:hover {
+  font-size: 2.5rem;
 }
 .fade-out {
   opacity: 0;
