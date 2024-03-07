@@ -10,6 +10,7 @@ A fun little game project of tic tac toe.
 
 - You can add two player name
 - You track both the player highest scores
+- If player scores higher than 3 than it will show in green color
 
 # Live Demo 👁️
 
