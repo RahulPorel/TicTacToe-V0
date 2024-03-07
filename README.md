@@ -21,10 +21,13 @@ A fun little game project of tic tac toe.
 
 # Snapshot of Tic Tac Toe
 
-![Screenshot (203)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/300b5375-c844-4b9d-b99f-ce7dc0f4d550)
-![Screenshot (204)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/08e198d7-c5a0-41d6-89e3-5de99e58cfec)
-![Screenshot (205)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/daea392d-a63d-41ee-805c-7c751313e84d)
-![Screenshot (206)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/66f73b1e-c2f0-4826-9ea8-24f3f496377c)
+![Screenshot (317)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/c148cb3e-48b5-4aad-a8aa-01e2f5e11b91)
+![Screenshot (318)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/a7db6fd2-4d0f-4421-bfe3-f36261eecc3a)
+![Screenshot (322)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/6d35658e-548b-4082-bb7e-02734422764c)
+
+![Screenshot (319)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/be074197-efa8-4e9e-95e6-2882f2bbabdb)
+![Screenshot (320)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/bb64cbc3-3d90-4d28-b554-9c615567c174)
+![Screenshot (321)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/cfc50dcd-9c64-4e1f-9a68-9f2be2020617)
 
 # Author
 
