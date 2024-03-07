@@ -6,6 +6,13 @@ const winMsgEl = document.getElementById("winningMessage");
 const winMsgTxtEl = document.querySelector("[data-winning-message-text]");
 const restartBtn = document.getElementById("restartBtn");
 
+const OScore = document.getElementById("o-Score");
+const XScore = document.getElementById("x-Score");
+const ScoreDash = document.getElementById("Scores");
+
+let playerScore_0 = 0;
+let playerScore_X = 0;
+
 const Winning_Combinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -17,23 +24,57 @@ const Winning_Combinations = [
   [2, 4, 6],
 ];
 
+const playerName0 = document.getElementById("user-name-O");
+const playerNameX = document.getElementById("user-name-X");
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
 let circleTurn;
 startGame();
 
 restartBtn.addEventListener("click", startGame);
 
 function displayNone() {
-  const screen = document.querySelector(".lets-play");
-  // Add the fade-out class to start the opacity transition
-  screen.classList.add("fade-out");
+  XScore.innerText = `Player x ${playerNameX.value}  : ${playerScore_X}`;
+  OScore.innerText = `Player 0 ${playerName0.value}  : ${playerScore_0}`;
 
-  // Wait for the transition to complete before hiding
-  setTimeout(() => {
-    screen.style.display = "none";
-  }, 650);
+  // TODO : Add localstorage
+
+  // localStorage.setItem("player0Name", playerName0.value);
+  // localStorage.setItem("playerXName", playerNameX.value);
+
+  // const playerNameOPrevValue = localStorage.getItem("player0Name");
+  // const playerNameXPrevValue = localStorage.getItem("playerXName");
+
+  // XScore.textContent = playerNameOPrevValue;
+  // OScore.textContent = playerNameXPrevValue;
+
+  const screen = document.querySelector(".lets-play");
+  if (playerName0.value.length && playerNameX.value.length >= 1) {
+    // Add the fade-out class to start the opacity transition
+    screen.classList.add("fade-out");
+
+    // Wait for the transition to complete before hiding
+    setTimeout(() => {
+      screen.style.display = "none";
+    }, 650);
+  } else {
+    alert("Enter Player Name to proceed");
+  }
 }
 
 function startGame() {
+  ScoreDash.textContent = "Higest Scores";
+  XScore.innerText = `Player x ${playerNameX.value}  : ${playerScore_X}`;
+  OScore.innerText = `Player 0 ${playerName0.value}  : ${playerScore_0}`;
+  if (playerScore_0 >= 3) {
+    OScore.style.color = "rgb(38 255 0)";
+  }
+  if (playerScore_X >= 3) {
+    XScore.style.color = "rgb(38 255 0)";
+  }
   circleTurn = false;
   cellEl.forEach((cell) => {
     cell.classList.remove(X_Class);
@@ -52,6 +93,7 @@ function handleClick(e) {
   // Check For win
   if (checkWin(currentClass)) {
     endGame(false);
+
     // Check For Draw
   } else if (isDraw()) {
     endGame(true);
@@ -64,9 +106,24 @@ function handleClick(e) {
 function endGame(draw) {
   if (draw) {
     winMsgTxtEl.innerText = "Draw!";
+    playerScore_0 = 0;
+
+    playerScore_X = 0;
   } else {
-    winMsgTxtEl.innerText = `${circleTurn ? "O's" : "X's"} Wins!`;
+    winMsgTxtEl.innerText = `${
+      circleTurn ? playerName0.value : playerNameX.value
+    }  Wins!`;
+    {
+      circleTurn ? playerScore_0++ : playerScore_X++;
+
+      localStorage.setItem("player0Score", playerScore_0);
+      localStorage.setItem("playerXScore", playerScore_X);
+
+      console.log(localStorage.getItem("player0Score"));
+      console.log(localStorage.getItem("playerXScore"));
+    }
   }
+
   winMsgEl.classList.add("show");
 }
 

@@ -10,8 +10,8 @@
 }
 
 body {
-  background-color: #1f8fad;
-  margin: 0;
+  background-color: #242423;
+  margin: 0;cursor:no-drop;
 }
 
 .lets-play {
@@ -21,7 +21,7 @@ body {
   z-index: 10; /* Ensure it's above all other content */
   height: 100vh;
   width: 100%;
-  background-color: rgb(17, 16, 16);
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,12 +70,12 @@ body {
 .cell {
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid black;
+  border: 1px solid rgb(255, 123, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  cursor: pointer;
+  cursor: grab;
 }
 
 .cell:first-child,
@@ -106,13 +106,13 @@ body {
 .cell.x::before,
 .cell.x::after,
 .cell.circle::before {
-  background-color: black;
+  background-color: rgb(226, 95, 7);
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   opacity: 0.55;
 }
 
@@ -153,11 +153,10 @@ body {
 
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-  width: calc(var(--mark-size) * .7);
-  height: calc(var(--mark-size) * .7);
-  background-color: white;
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
+  background-color: rgb(54, 37, 37);
 }
-
 
 .winning-message {
   display: none;
@@ -201,4 +200,55 @@ body {
 
 .winning-message.show {
   display: flex;
+}
+.score-dashboard,
+.player-dashboard,
+.headline {
+  position: absolute;
+}
+
+.score-dashboard {
+  font-size: 25px;
+  margin-left: 25px;
+}
+.player-dashboard {
+  margin-bottom: 15em;
+  display: grid;
+  grid-template: 40px 0px / 1fr 1fr;
+  gap: 20px;
+}
+
+#user-name-X,
+#user-name-O {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: 1px solid #d5d4d8;
+  color: rgb(0, 153, 255);
+  font-weight: 600;
+  text-indent: 15px;
+}
+
+.headline {
+  color: #d5d4d8;
+
+  bottom: 80px;
+  left: 40%;
+  font-weight: 800;
+  font-family: "Karla", sans-serif;
+}
+
+#o-Score,
+#x-Score {
+  font-family: "Karla", sans-serif;
+
+  font-weight: 700;
+  text-align: start;
+  color: rgb(50, 145, 235);
+}
+#Scores {
+  font-family: "Karla", sans-serif;
+
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  text-align: center;
 }
