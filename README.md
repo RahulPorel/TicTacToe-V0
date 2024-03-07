@@ -29,6 +29,3 @@ A fun little game project of tic tac toe.
 ![Screenshot (320)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/bb64cbc3-3d90-4d28-b554-9c615567c174)
 ![Screenshot (321)](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/cfc50dcd-9c64-4e1f-9a68-9f2be2020617)
 
-# Author
-
-Rahul Porel
