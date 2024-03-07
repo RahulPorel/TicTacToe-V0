@@ -40,8 +40,7 @@ function displayNone() {
   XScore.innerText = `Player x ${playerNameX.value}  : ${playerScore_X}`;
   OScore.innerText = `Player 0 ${playerName0.value}  : ${playerScore_0}`;
 
-  // TODO : Add localstorage
-
+  // TODO : add localstorage for scores and name 
   // localStorage.setItem("player0Name", playerName0.value);
   // localStorage.setItem("playerXName", playerNameX.value);
 
