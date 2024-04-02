@@ -254,3 +254,27 @@ body {
   font-weight: 900;
   text-align: center;
 }
+
+@media screen and (max-width: 540px) {
+  #user-name-X,
+  #user-name-O {
+    border-radius: 5px;
+    font-size: 0.85rem;
+    border: 1px solid #d5d4d8;
+    color: rgb(0, 153, 255);
+    font-weight: 600;
+    text-indent: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #user-name-X,
+  #user-name-O {
+    border-radius: 5px;
+    font-size: 0.75rem;
+    border: 1px solid #d5d4d8;
+    color: rgb(0, 153, 255);
+    font-weight: 600;
+    text-indent: 15px;
+  }
+}
