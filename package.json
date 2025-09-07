@@ -7,6 +7,11 @@
     "start": "parcel",
     "build": "parcel build"
   },
+  "targets": {
+    "default": {
+      "sourceMap": false
+    }
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1"
   },
