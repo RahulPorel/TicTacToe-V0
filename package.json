@@ -1,0 +1,16 @@
+{
+  "name": "ticktactoe-v0",
+  "private": true,
+  "version": "0.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.0"
+  }
+}

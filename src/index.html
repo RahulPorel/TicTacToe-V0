@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tic Tac Toe | Play with Friends</title>
+    <meta
+      name="description"
+      content="Play Tic Tac Toe with your friends. Track the player highest scores and enjoy a fun retro game experience."
+    />
+  </head>
+  <body>
+    <div class="lets-play">
+      <div class="start-card">
+        <h1 class="game-title">
+          Tic Tac Toe
+          <p class="game-info">Enter player names to start the game.</p>
+        </h1>
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Enter X's Name"
+            id="user-name-X"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Enter O's Name"
+            id="user-name-O"
+            required
+          />
+        </div>
+
+        <button class="play-button" id="start-game">
+          <i class="fa-solid fa-gamepad"></i> &nbsp; Play
+        </button>
+
+        <div class="tc-modal">
+          <!-- checkbox controls visibility -->
+          <input id="modal-toggle" type="checkbox" />
+
+          <!-- button that opens modal -->
+          <label
+            for="modal-toggle"
+            class="open-btn"
+            role="button"
+            aria-haspopup="dialog"
+          >
+            Play New Version
+          </label>
+
+          <!-- overlay / modal -->
+          <div
+            class="overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <div class="card" role="document">
+              <h3 id="modal-title">Tic Tac Toe | Multiplayer Game</h3>
+              <p>
+                The new version brings online multiplayer so you can host games
+                with friends & vice versa, a global leaderboard to track scores,
+                an upgraded UI/UX, and plenty more improvements. Give it a try
+                now!
+              </p>
+
+              <div class="actions">
+                <a
+                  target="_blank"
+                  href="https://tictactoe.rahulporel.com/"
+                  class="btn-primary"
+                  >Play new version</a
+                >
+
+                <label for="modal-toggle" class="btn-secondary"
+                  >Stay on old version</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="score-dashboard">
+      <p id="Scores"></p>
+      <p id="x-Score"></p>
+      <p id="o-Score"></p>
+    </div>
+
+    <div class="turn-dashboard">
+      <p id="whos-turn">
+        <span class="turn"> Turn </span>
+      </p>
+    </div>
+
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button class="restart-btn" id="restartBtn">Restart</button>
+    </div>
+    <script type="module" src="app.js" async></script>
+  </body>
+</html>

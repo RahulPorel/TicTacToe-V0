@@ -2,23 +2,15 @@
 
 Tic Tac Toe game that you can play in your browser!
 
-# Description
-
-A fun little game project of tic tac toe.
-
 # Features
 
 - You can add two player name
 - You track both the player highest scores
-- If player scores higher than 3 than it will show in green color
-- Responsive
 
 # Live Demo 👁️
 
-- Netlify 🔗
-  https://tic-tac-toe-rahulporel.netlify.app/
-- Github Pages 🔗
-  https://rahulporel.github.io/Tic_Tac_Toe/
+- https://tic-tac-toe-rahulporel.netlify.app/
+
 
 # Snapshot of Tic Tac Toe
 
